@@ -54,7 +54,8 @@ router.put('/:id', function (req, res) {
     }
 
     client.query('UPDATE employees ' +
-                  'SET active = $1 ' ,
+                  'SET active = $1 ' +
+                  'WHERE id = ' + id,
                    [false],
                  function (err, result) {
                    done();
