@@ -84,13 +84,14 @@ $(document).ready(function() {
 
 
             }
-
+            //gets the employee id from the dom
             function getEmployeeId(button) {
                 var employeeId = button.parent().data('id');
                 console.log('employeeId', employeeId);
                 return employeeId;
             }
 
+            //sets the employee status to inactive
             function inactivateEmployee() {
                 event.preventDefault();
 

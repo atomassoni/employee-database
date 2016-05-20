@@ -70,31 +70,5 @@ router.put('/:id', function (req, res) {
   });
 });
 
-router.delete('/:id', function (req, res) {
-  var id = req.params.id;
-  console.log(id);
-  pg.connect(connectionString, function (err, client, done) {
-    if (err) {
-      console.log(err);
-      res.sendStatus(500);
-    }
-
-    client.query('DELETE FROM movies ' +
-                  'WHERE movie_id = $1',
-                   [id],
-                 function (err, result) {
-                   done();
-
-                   if (err) {
-                     console.log(err);
-                     res.sendStatus(500);
-                     return;
-                   }
-
-                   res.sendStatus(200);
-                 });
-  });
-});
-
 
 module.exports = router;
