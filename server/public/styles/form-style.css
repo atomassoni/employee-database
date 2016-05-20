@@ -22,11 +22,15 @@ header p {
     padding: 2px;
     min-height: contain-floats;
 }
-li {
-    width: 120px;
-    list-style: none;
-    display: inline-table;
-}
+
 .person:nth-child(2n) {
     background-color: lightgray;
+}
+
+th, tr, td, table {
+    border: 1px solid black;
+}
+td, th {
+    width: 100px;
+
 }

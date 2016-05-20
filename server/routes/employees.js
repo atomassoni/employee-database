@@ -9,7 +9,7 @@ router.get('/', function (req, res) {
       res.sendStatus(500);
     }
 
-    client.query('SELECT * FROM employees', function (err, result) {
+    client.query('SELECT * FROM employees WHERE active=TRUE', function (err, result) {
       done();
 
       console.log(result.rows);
@@ -53,12 +53,9 @@ router.put('/:id', function (req, res) {
       res.sendStatus(500);
     }
 
-    client.query('UPDATE movies ' +
-                  'SET title = $1, ' +
-                  'year = $2, ' +
-                  'director = $3' +
-                  'WHERE movie_id = $4',
-                   [movie.title, movie.year, movie.director, id],
+    client.query('UPDATE employees ' +
+                  'SET active = $1 ' ,
+                   [false],
                  function (err, result) {
                    done();
 
