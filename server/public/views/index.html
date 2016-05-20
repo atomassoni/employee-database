@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Employee Info</title>
+      <script type="text/javascript" src="../assets/vendors/jquery.min.js"></script>
+      <script type="text/javascript" src="../scripts/forms.js"></script>
+      <link rel="stylesheet" href="../styles/form-style.css" />
+  </head>
+  <body>
+    <h1>Employee Info</h1>
+    <div>
+      <form id="employeeinfo">
+        <label for="employeefirstname">Employee First Name:</label>
+        <input type="text" id="employeefirstname" name="employeefirstname" />
+
+        <label for="employeelastname">Employee Last Name:</label>
+        <input type="text" id="employeelastname" name="employeelastname" />
+
+        <label for="employeeident">Employee ID Number:</label>
+        <input type="number" id="employeeident" name="employeeident" />
+
+        <label for="employeetitle">Employee Job Title:</label>
+        <input type="text" id="employeetitle" name="employeetitle" />
+
+        <label for="employeesalary">Employee Annual Salary:</label>
+        <input type="number" id="employeesalary" name="employeesalary" />
+
+        <input type="submit" value="Submit Employee" />
+      </form>
+
+    </div>
+    <div id="container">
+      <header>
+        <p>
+          Name
+        </p>
+        <p>
+          Employee #
+        </p>
+        <p>
+          Job Title
+        </p>
+        <p>
+          Annual Salary
+        </p>
+      </header>
+    </div>
+    <div id="monthlysalarytotal">
+    </div>
+  </body>
+</html>

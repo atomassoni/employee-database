@@ -1,0 +1,32 @@
+body main h1 ul li p {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+h1 {
+    color: teal;
+}
+#container {
+    padding: 10px;
+    margin-left: 30px;
+}
+header {
+    border-bottom: 2px solid black;
+}
+header p {
+    width: 120px;
+    padding-bottom: 2px;
+    display: inline-table;
+}
+.person {
+    border: 2px solid black;
+    padding: 2px;
+    min-height: contain-floats;
+}
+li {
+    width: 120px;
+    list-style: none;
+    display: inline-table;
+}
+.person:nth-child(2n) {
+    background-color: lightgray;
+}
